@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 The ZMK Contributors
+ * Copyright (c) 2024 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -7,10 +7,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "totem-layouts.dtsi"
 
+&physical_layout0 {
+    transform = <&default_transform>;
+};
+
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,physical-layout = &totem_layout;
+        zmk,physical-layout = &physical_layout0;
     };
 
     default_transform: keymap_transform_0 {
