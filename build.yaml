@@ -5,4 +5,4 @@ include:
     shield: totem_right
   - board: seeeduino_xiao_ble
     shield: dongle
-# there is no settingsreset (needed) for the XIAO
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
