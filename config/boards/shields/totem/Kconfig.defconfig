@@ -1,6 +1,9 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
+#
+# Dongle specific
+#
 if SHIELD_DONGLE
 
 config ZMK_KEYBOARD_NAME
@@ -22,6 +25,22 @@ config BT_MAX_PAIRED
 
 endif
 
+# 
+# KB specific
+#
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+
+config CONFIG_ZMK_SLEEP
+    default y
+
+config CONFIG_ZMK_IDLE_SLEEP_TIMEOUT
+    default y
+
+endif
+
+#
+# All
+#
 if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_DONGLE
 
 config ZMK_SPLIT
